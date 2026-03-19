@@ -7,7 +7,7 @@
 /* [★ USER PARAMETERS ★] */
 ext_U         = 3;       // rack units of extension height
 crossbar_span = 140.0;   // front-to-back between post outer faces *** MEASURE ***
-mirror_post   = false;   // false = left post (holes near wall C), true = right post (holes near wall B)
+mirror_post   = true;   // false = left post (holes near wall C), true = right post (holes near wall B)
 
 /* [T1 extrusion — measured] */
 leg_len       = 30.0;
@@ -44,8 +44,8 @@ t1_screw_z    = 12.5;  // distance above ext_h to screw centre (mm) ← TUNE THI
 crossbar_h = 12.0;
 
 /* [M3 crossbar lock screw] */
-lock_d        = 4.5;
-lock_head_d   = 6.0;
+lock_d        = 3.6;
+lock_head_d   = 8.0;
 lock_cs_angle = 45;
 
 /* [Rubber feet on crossbar] */

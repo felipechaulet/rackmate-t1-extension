@@ -1,6 +1,6 @@
 # GeekPi RackMate T1 — Corner Post & Beam Extension
 
-OpenSCAD parametric extension parts for the **GeekPi RackMate T1** 10-inch desktop rack. Adds rack-unit height below or between the T1 chassis using printable corner posts and horizontal beams, all locked with dovetail joints and M3 screws.
+OpenSCAD parametric extension parts for the **GeekPi RackMate T1** 10-inch desktop rack. Adds rack-unit height below or between the T1 chassis using printable corner posts and horizontal beams, all locked with dovetail joints and M4 screws.
 
 ## Files
 
@@ -21,13 +21,13 @@ Extends the height of the rack by a configurable number of U (rack units). Each 
 - A three-walled **cradle** at the top that the T1 chassis corners drop into.
 - **#10-32 rack holes** on the outer face (EIA-310 spacing: 15.875 mm between pairs, 6.35 mm first-hole offset).
 - A **countersunk top hole** that aligns with the T1's bottom mounting point — secured with an M4 countersink screw and nut.
-- A **dovetail channel** on the bottom that accepts the crossbar/beam; the channel is sized for an M3 heated insert, locked with an M3 screw.
+- A **dovetail channel** on the bottom that accepts the crossbar/beam, locked with an M4 countersink screw (see assembly options below).
 
 Print **2** — one with `mirror_post = false` (left), one with `mirror_post = true` (right).
 
 ### Crossbar / Beam (`rackmate_t1_beam.scad`)
 
-Runs between two corner posts (front-to-back or left-to-right). Dovetail ends slot into the post channels and are secured by the M3 heated insert + screw in each post.
+Runs between two corner posts (front-to-back or left-to-right). Dovetail ends slot into the post channels and are locked with an M4 countersink screw from below. The screw hole is sized to reuse the rubber feet that ship with the RackMate T1 (see assembly options).
 
 Print as many as needed.
 
@@ -61,9 +61,9 @@ Print as many as needed.
 | Qty | Part | Used for |
 |---|---|---|
 | 2 | M4 countersink screw + nut | Top cradle — attaches post to T1 chassis |
-| 2× per beam | M3 heated insert | Press into dovetail channel on each post |
-| 2× per beam | M3 screw | Locks beam dovetail into post |
-| 4 | Rubber stick-on feet or felt pads | Base of posts (optional) |
+| 2× per beam | M4 countersink screw | Locks beam dovetail into post (see options below) |
+
+**No extra feet needed** — the screw holes at the base are designed to accept the rubber feet and their screws from the RackMate T1.
 
 ---
 
@@ -81,11 +81,20 @@ Print as many as needed.
 ## Assembly
 
 1. **Print** 2 corner posts (one left, one right) and the required beams/crossbars.
-2. **Press** an M3 heated insert into the dovetail channel at the bottom of each post.
-3. **Slide** the beam dovetail ends into the post channels, then drive an M3 screw through the channel to lock each joint.
-4. *(Optional)* **Attach** rubber feet or felt pads to the base of each post.
-5. **Place** the T1 chassis corners into the top cradle of each post.
-6. **Secure** the top with an M4 countersink screw and nut through the cradle hole into the T1's bottom mounting point.
+2. **Slide** the beam dovetail ends into the post channels.
+3. **Lock** the beam using one of the two options below.
+4. **Place** the T1 chassis corners into the top cradle of each post.
+5. **Secure** the top with an M4 countersink screw and nut through the cradle hole into the T1's bottom mounting point.
+
+### Beam locking options
+
+The screw holes at the base of each post are sized to fit the rubber feet that ship with the RackMate T1 (M4 screw + rubber foot).
+
+**Option A — reuse T1 rubber feet (recommended)**
+Remove the rubber feet from the T1 chassis (they unscrew). Insert the screw up through the beam dovetail into the post, then thread the rubber foot back onto the screw from below. The foot locks the joint and keeps the assembly stable on a desk.
+
+**Option B — standard M4 screw**
+Drive a plain M4 countersink screw up through the beam into the post. The T1 rubber feet are not used and can be left on the T1 or set aside.
 
 ---
 

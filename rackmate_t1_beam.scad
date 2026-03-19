@@ -11,9 +11,9 @@ dovetail_h_right =  15.0;  // insertion depth of right dovetail into post (mm)
 pole_height      =  10.0;  // vertical thickness of the pole body (mm)
 dovetail_height  =  4.9;  // vertical thickness of the dovetail sections (mm)
 
-/* [Lock screw — M3 flat-head, countersunk from bottom] */
-lock_d        = 3.4;   // M3 clearance
-lock_head_d   = 6.0;   // M3 flat-head diameter
+/* [Lock screw — M4 flat-head, countersunk from bottom] */
+lock_d        = 4.3;   // M4 clearance
+lock_head_d   = 9.5;   // M4 flat-head diameter
 lock_cs_angle = 45;    // half-angle
 
 /* [Dovetail dimensions — must match corner post v9] */
