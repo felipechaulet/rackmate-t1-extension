@@ -5,11 +5,11 @@
 // ============================================================
 
 /* [★ USER PARAMETERS ★] */
-pole_length      = 10.0;  // distance between the two post inner faces (mm) *** MEASURE ***
+pole_length      = 140.0;  // distance between the two post inner faces (mm) *** MEASURE ***
 dovetail_h_left  =  15.0;  // insertion depth of left dovetail into post (mm)
 dovetail_h_right =  15.0;  // insertion depth of right dovetail into post (mm)
 pole_height      =  10.0;  // vertical thickness of the pole body (mm)
-dovetail_height  =  5.0;  // vertical thickness of the dovetail sections (mm)
+dovetail_height  =  4.9;  // vertical thickness of the dovetail sections (mm)
 
 /* [Lock screw — M3 flat-head, countersunk from bottom] */
 lock_d        = 3.4;   // M3 clearance

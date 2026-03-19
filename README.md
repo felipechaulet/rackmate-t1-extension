@@ -6,8 +6,8 @@ OpenSCAD parametric extension parts for the **GeekPi RackMate T1** 10-inch deskt
 
 | File | What it produces |
 |---|---|
-| `rackmate_t1_post.scad` | Corner post + side crossbar (print 2 posts, 2 crossbars) |
-| `rackmate_t1_beam.scad` | Horizontal pole connecting two corner posts front-to-back |
+| `rackmate_t1_post.scad` | Corner post (print 2 — one left, one right) |
+| `rackmate_t1_beam.scad` | Crossbar / horizontal beam connecting two corner posts |
 
 ---
 
@@ -20,22 +20,16 @@ Extends the height of the rack by a configurable number of U (rack units). Each 
 - A **solid body** that fills one rack-unit height per `ext_U`.
 - A three-walled **cradle** at the top that the T1 chassis corners drop into.
 - **#10-32 rack holes** on the outer face (EIA-310 spacing: 15.875 mm between pairs, 6.35 mm first-hole offset).
-- A **countersunk top hole** that aligns with the T1's bottom rack hole.
-- A **dovetail channel** on the inner face that accepts the side crossbar or horizontal beam.
+- A **countersunk top hole** that aligns with the T1's bottom mounting point — secured with an M4 countersink screw and nut.
+- A **dovetail channel** on the bottom that accepts the crossbar/beam; the channel is sized for an M3 heated insert, locked with an M3 screw.
 
-Print **2 pairs** — one mirrored for left/right (`mirror_post = false/true`).
+Print **2** — one with `mirror_post = false` (left), one with `mirror_post = true` (right).
 
-### Side crossbar (`rackmate_t1_post.scad` — `side_crossbar()` module)
+### Crossbar / Beam (`rackmate_t1_beam.scad`)
 
-Runs front-to-back between two corner posts. Dovetail ends slide up into the post channels and are locked with M3 flat-head screws. Rubber feet recesses on the underside keep the assembly stable on a desk.
+Runs between two corner posts (front-to-back or left-to-right). Dovetail ends slot into the post channels and are secured by the M3 heated insert + screw in each post.
 
-Print **2**.
-
-### Horizontal beam (`rackmate_t1_beam.scad`)
-
-Runs left-to-right between two corner posts (or any two posts with a matching dovetail channel). Dovetail on both ends, each locked with a countersunk M3 flat-head screw from below.
-
-Print as many as needed to span the rack width.
+Print as many as needed.
 
 ---
 
@@ -66,32 +60,32 @@ Print as many as needed to span the rack width.
 
 | Qty | Part | Used for |
 |---|---|---|
-| 2 | #10-32 flat-head 82° screw | Top rack hole countersink on corner posts |
-| 4 | M3 flat-head screw + nut | Side crossbar lock screws (one per dovetail end) |
-| 2 | M3 flat-head screw + nut | Horizontal beam lock screws (one per dovetail end) |
-| 4 | Rubber stick-on feet Ø12 mm | Crossbar base ends |
+| 2 | M4 countersink screw + nut | Top cradle — attaches post to T1 chassis |
+| 2× per beam | M3 heated insert | Press into dovetail channel on each post |
+| 2× per beam | M3 screw | Locks beam dovetail into post |
+| 4 | Rubber stick-on feet or felt pads | Base of posts (optional) |
 
 ---
 
 ## Print settings
 
-| Setting | Posts | Crossbars / Beams |
-|---|---|---|
-| Material | PETG or ASA | PETG or ASA |
-| Perimeters | 6 | 4 |
-| Infill | 50% gyroid | 30% |
-| Orientation | Upright, no supports | Flat, no supports |
+| Setting | Recommendation |
+|---|---|
+| Material | PLA (or better) |
+| Walls / Perimeters | 3 minimum — more for 2U and 3U posts |
+| Infill | 25% minimum — increase for taller posts |
+| Supports | Not required, but recommended for the dovetail cutout |
 
 ---
 
 ## Assembly
 
-1. **Print** 2 corner posts (one with `mirror_post=false`, one with `mirror_post=true`) and 2 side crossbars.
-2. **Slide** the crossbar dovetail ends **upward** into the post inner-face channels.
-3. **Tighten** the M3 lock screws through the post face into each dovetail to secure the crossbars.
-4. **Drop** the T1 chassis corners into the cradle from above.
-5. **Install** rack panels using #10-32 screws; the top hole is countersunk for a flush fit.
-6. *(Optional)* **Insert** horizontal beams between posts for additional lateral rigidity or cable management rails.
+1. **Print** 2 corner posts (one left, one right) and the required beams/crossbars.
+2. **Press** an M3 heated insert into the dovetail channel at the bottom of each post.
+3. **Slide** the beam dovetail ends into the post channels, then drive an M3 screw through the channel to lock each joint.
+4. *(Optional)* **Attach** rubber feet or felt pads to the base of each post.
+5. **Place** the T1 chassis corners into the top cradle of each post.
+6. **Secure** the top with an M4 countersink screw and nut through the cradle hole into the T1's bottom mounting point.
 
 ---
 
