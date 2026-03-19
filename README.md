@@ -6,8 +6,8 @@ OpenSCAD parametric extension parts for the **GeekPi RackMate T1** 10-inch deskt
 
 | File | What it produces |
 |---|---|
-| `rackmate_t1_post.scad` | Corner post (print 2 — one left, one right) |
-| `rackmate_t1_beam.scad` | Crossbar / horizontal beam connecting two corner posts |
+| `rackmate_t1_post.scad` | Corner post (print 4 — two left, two right) |
+| `rackmate_t1_beam.scad` | Crossbar / horizontal beam connecting two corner posts (print 2)|
 
 ---
 
